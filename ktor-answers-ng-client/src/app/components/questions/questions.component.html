@@ -1,25 +1,6 @@
 <h3>The Current Questions</h3>
 
-<table data-testid="flights-table" class="table table-striped table-bordered table-hover">
-  <thead>
-  <tr>
-    <th>#</th>
-    <th>Date Asked</th>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Up Count</th>
-    <th>Down Count</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let question of questionService.questions | async">
-    <td>{{question.post_id}}</td>
-    <td>{{question.creation_date | date}}</td>
-    <td>{{question.title}}</td>
-    <td>{{question.body}}</td>
-    <td>{{question.up_vote_count}}</td>
-    <td>{{question.down_vote_count}}</td>
-  </tr>
-  </tbody>
-</table>
+<div *ngFor="let question of questionService.questions | async">
+  <app-question-card [question]="question"></app-question-card>
+</div>
 

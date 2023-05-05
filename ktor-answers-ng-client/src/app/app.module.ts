@@ -8,6 +8,7 @@ import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 import { AnswersComponent } from './components/answers/answers.component';
 import {HttpClientModule} from "@angular/common/http";
+import { QuestionCardComponent } from './components/question-card/question-card.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,7 +22,8 @@ export const routes: Routes = [
     SideBarComponent,
     QuestionsComponent,
     HomeComponent,
-    AnswersComponent
+    AnswersComponent,
+    QuestionCardComponent
   ],
   imports: [
     BrowserModule,
