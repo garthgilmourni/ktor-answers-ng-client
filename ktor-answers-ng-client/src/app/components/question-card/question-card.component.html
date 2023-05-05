@@ -1,7 +1,15 @@
-<div>
-    <h3>{{question.title}}</h3>
-    <p>
-        {{question.body}}
-    </p>
+<div class="container">
     <hr/>
+    <div class="row">
+        <h3>{{question.title}}</h3>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div>{{question.answers.length}} Answers</div>
+            <div>{{question.comments.length}} Comments</div>
+        </div>
+        <div class="col-9">
+            {{bodySummary()}}
+        </div>
+    </div>
 </div>

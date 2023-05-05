@@ -1,5 +1,6 @@
 import {PostType} from "../post-type";
 import {JsonUser} from "./json-user";
+import {JsonComment} from "./json-comment";
 
 export interface JsonPost {
   post_id: number,
@@ -10,7 +11,7 @@ export interface JsonPost {
   link: string,
   title: string,
   body: string,
-  comments: Array<Comment>,
+  comments: Array<JsonComment>,
   up_vote_count: number,
   down_vote_count: number,
   owner: JsonUser

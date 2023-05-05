@@ -8,4 +8,12 @@ import {Question} from "../../model/entity/question";
 })
 export class QuestionCardComponent {
   @Input() question!: Question;
+
+  bodySummary(): string {
+    if(this.question.body.length < 200) {
+      return this.question.body;
+    } else {
+      return this.question.body.substring(0, 200);
+    }
+  }
 }
