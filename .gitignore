@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 .angular/
+.editorconfig
 *.o
 *.d
 *.iml
