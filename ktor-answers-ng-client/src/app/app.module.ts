@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './components/app/app.component';
-import { NavigationBarComponent } from './components/side-bar/navigation-bar.component';
+import { NavigationBarComponent } from './components/header/navigation-bar/navigation-bar.component';
 import { QuestionsListComponent } from './components/questions/questions-list/questions-list.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
