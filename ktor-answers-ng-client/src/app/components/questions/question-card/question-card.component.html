@@ -1,16 +1,22 @@
-<div class="container">
-    <hr/>
-    <div class="row">
-        <h3>{{question.title}}</h3>
-    </div>
-    <div class="row">
-        <div class="col-3">
-            <div>{{question.answers.length}} Answers</div>
-            <div>{{question.comments.length}} Comments</div>
-            <div (click)="questionSelected()">Select</div>
+<div class="card mt-2 col-md-12">
+    <div class="card-body">
+        <h5 class="card-title">{{question.title}}</h5>
+        <div class="card-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div>{{question.answers.length}} Answers</div>
+                        <div>{{question.comments.length}} Comments</div>
+                    </div>
+                    <div class="col-9">
+                        {{bodySummary()}}
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn-link" (click)="questionSelected()">Select</div>
         </div>
-        <div class="col-9">
-            {{bodySummary()}}
+        <div class="card-footer text-body-secondary text-end">
+            Asked by {{question.owner.user_id}} on {{question.creation_date}}
         </div>
     </div>
 </div>

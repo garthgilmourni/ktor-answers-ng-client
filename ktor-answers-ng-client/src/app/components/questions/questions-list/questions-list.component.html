@@ -1,8 +1,4 @@
-<div>
-    <h3>The Current Questions</h3>
-
-    <div *ngFor="let question of questionService.questions | async">
-        <app-question-card [question]="question" (selected)="questionSelected($event)">
-        </app-question-card>
-    </div>
+<div *ngFor="let question of questionService.questions | async">
+    <app-question-card [question]="question" (selected)="questionSelected($event)">
+    </app-question-card>
 </div>
