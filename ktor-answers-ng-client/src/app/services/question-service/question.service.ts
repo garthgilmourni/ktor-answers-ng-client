@@ -1,15 +1,15 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {JsonQuestion} from "../model/api/json-question";
+import {JsonQuestion} from "../../model/api/json-question";
 import {BehaviorSubject, map, Observable} from "rxjs";
-import {Question} from "../model/entity/question";
-import {JsonUser} from "../model/api/json-user";
-import {User} from "../model/entity/user";
-import {JsonComment} from "../model/api/json-comment";
-import {PostComment} from "../model/entity/post-comment";
-import {JsonAnswer} from "../model/api/json-answer";
-import {Answer} from "../model/entity/answer";
-import {PostType} from "../model/post-type";
+import {Question} from "../../model/entity/question";
+import {JsonUser} from "../../model/api/json-user";
+import {User} from "../../model/entity/user";
+import {JsonComment} from "../../model/api/json-comment";
+import {PostComment} from "../../model/entity/post-comment";
+import {JsonAnswer} from "../../model/api/json-answer";
+import {Answer} from "../../model/entity/answer";
+import {PostType} from "../../model/post-type";
 
 const url = "http://localhost:8080/questions";
 

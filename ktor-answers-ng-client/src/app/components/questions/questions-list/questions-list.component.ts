@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Question} from "../../../model/entity/question";
-import {QuestionService} from "../../../services/question.service";
+import {QuestionService} from "../../../services/question-service/question.service";
 
 @Component({
   selector: 'app-questions-list',

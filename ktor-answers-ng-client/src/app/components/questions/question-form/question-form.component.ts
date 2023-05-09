@@ -3,7 +3,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {createTextValidator} from "../../../utilities/utils";
 import {Question} from "../../../model/entity/question";
 import {User} from "../../../model/entity/user";
-import {QuestionService} from "../../../services/question.service";
+import {QuestionService} from "../../../services/question-service/question.service";
 
 @Component({
     selector: 'app-question-form',
