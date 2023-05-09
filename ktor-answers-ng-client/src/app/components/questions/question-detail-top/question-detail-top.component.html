@@ -14,24 +14,8 @@
         </div>
         <div class="col-9">
             {{question.body}}
-            <hr/>
-            <div>
-                <button class="btn btn-link"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#commentsOnQuestion"
-                        aria-expanded="false"
-                        aria-controls="commentsOnQuestion">
-                    Toggle Comments
-                </button>
-            </div>
-            <hr/>
-            <div class="collapse" id="commentsOnQuestion">
-                <div *ngFor="let comment of question.comments">
-                    <div class="fw-lighter ps-3">{{comment.body}}</div>
-                    <hr/>
-                </div>
-            </div>
+            <app-comments-display [comments]="question.comments">
+            </app-comments-display>
         </div>
     </div>
 </div>

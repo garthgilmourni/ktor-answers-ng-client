@@ -1,0 +1,19 @@
+<div *ngIf="comments != null">
+    <div>
+        <button class="btn btn-link"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#commentsOnQuestion"
+                aria-expanded="false"
+                aria-controls="commentsOnQuestion">
+            Toggle Comments
+        </button>
+    </div>
+    <hr/>
+    <div class="collapse" id="commentsOnQuestion">
+        <div *ngFor="let comment of comments">
+            <div class="fw-lighter ps-3">{{comment.body}}</div>
+            <hr/>
+        </div>
+    </div>
+</div>
