@@ -1,21 +1,6 @@
-<div class="container" *ngIf="question != null">
-    <div class="row">
-        <h3>{{question.title}}</h3>
-    </div>
-    <div class="row">
-        <div class="col-3">
-            <div>{{question.answers.length}} Answers</div>
-            <div>{{question.comments.length}} Comments</div>
-            <div>
-                <button type="button" class="btn btn-link" (click)="finishedWithQuestion()">
-                    Go Back
-                </button>
-            </div>
-        </div>
-        <div class="col-9">
-            {{question.body}}
-        </div>
-    </div>
+<div *ngIf="question != null">
+    <app-question-detail-top [question]="question" [onFinished]="finishedWithQuestion.bind(this)">
+    </app-question-detail-top>
 </div>
 <div *ngIf="question == null">
     <h3>Question {{id}} details not available!</h3>

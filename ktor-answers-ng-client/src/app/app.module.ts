@@ -12,6 +12,7 @@ import { QuestionCardComponent } from './components/questions/question-card/ques
 import { QuestionsContainerComponent } from './components/questions/questions-container/questions-container.component';
 import { QuestionDetailComponent } from './components/questions/question-detail/question-detail.component';
 import { UsersComponent } from './components/users/users.component';
+import { QuestionDetailTopComponent } from './components/questions/question-detail-top/question-detail-top.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -30,7 +31,8 @@ export const routes: Routes = [
     QuestionCardComponent,
     QuestionsContainerComponent,
     QuestionDetailComponent,
-    UsersComponent
+    UsersComponent,
+    QuestionDetailTopComponent
   ],
   imports: [
     BrowserModule,

@@ -2,10 +2,10 @@ import {User} from "./user";
 
 export class PostComment {
   public constructor(
-    comment_id: number,
-    owner: User,
-    post_id: number,
-    body: string
+    public comment_id: number,
+    public owner: User,
+    public post_id: number,
+    public body: string
   ) {
   }
 }
