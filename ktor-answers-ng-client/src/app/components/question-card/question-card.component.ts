@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Question} from "../../model/entity/question";
 
 @Component({
@@ -8,6 +8,7 @@ import {Question} from "../../model/entity/question";
 })
 export class QuestionCardComponent {
   @Input() question!: Question;
+  @Output() selected = new EventEmitter<number>();
 
   bodySummary(): string {
     if(this.question.body.length < 200) {
@@ -16,4 +17,8 @@ export class QuestionCardComponent {
       return this.question.body.substring(0, 200);
     }
   }
+
+    questionSelected() {
+        this.selected.emit(this.question.post_id)
+    }
 }

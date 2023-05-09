@@ -33,6 +33,13 @@ export class QuestionService {
       );
   }
 
+  getById(id: number): Observable<Question> {
+    return this.http.get<JsonQuestion>(`${url}/${id}`)
+        .pipe(
+            map(remapQuestion)
+        );
+  }
+
   refresh() {
     return this.getAll()
       .subscribe(questions => this.questionsSubject.next(questions));

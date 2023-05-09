@@ -1,0 +1,7 @@
+<div *ngIf="!singleQuestionSelected">
+    <app-questions-list (selected)="questionSelected($event)"></app-questions-list>
+</div>
+<div *ngIf="singleQuestionSelected">
+    <app-question-detail [id]="selectedQuestionID" (finished)="questionDeSelected($event)">
+    </app-question-detail>
+</div>

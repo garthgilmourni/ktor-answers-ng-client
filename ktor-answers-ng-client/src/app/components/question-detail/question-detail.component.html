@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="question != null">
     <hr/>
     <div class="row">
         <h3>{{question.title}}</h3>
@@ -7,10 +7,13 @@
         <div class="col-3">
             <div>{{question.answers.length}} Answers</div>
             <div>{{question.comments.length}} Comments</div>
-            <div (click)="questionSelected()">Select</div>
+            <div (click)="finishedWithQuestion()">Back</div>
         </div>
         <div class="col-9">
-            {{bodySummary()}}
+            {{question.body}}
         </div>
     </div>
+</div>
+<div *ngIf="question == null">
+    <h3>Question {{id}} details not available!</h3>
 </div>
