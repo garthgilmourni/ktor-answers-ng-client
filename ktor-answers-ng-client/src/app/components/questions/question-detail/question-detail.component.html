@@ -1,6 +1,8 @@
 <div *ngIf="question != null">
     <app-question-detail-top [question]="question" [onFinished]="finishedWithQuestion.bind(this)">
     </app-question-detail-top>
+    <app-question-detail-answers [question]="question">
+    </app-question-detail-answers>
 </div>
 <div *ngIf="question == null">
     <h3>Question {{id}} details not available!</h3>
