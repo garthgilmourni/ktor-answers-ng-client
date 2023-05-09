@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './components/app/app.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NavigationBarComponent } from './components/side-bar/navigation-bar.component';
 import { QuestionsListComponent } from './components/questions/questions-list/questions-list.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +21,7 @@ export const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
+    NavigationBarComponent,
     QuestionsListComponent,
     HomeComponent,
     AnswersComponent,
