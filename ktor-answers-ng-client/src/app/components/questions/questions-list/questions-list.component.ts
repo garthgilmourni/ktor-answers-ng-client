@@ -22,4 +22,10 @@ export class QuestionsListComponent implements OnInit {
   questionSelected(id: number) {
     this.selected.emit(id);
   }
+
+  questionDeleted(id: number) {
+    this.questionService
+        .deleteById(id)
+        .subscribe(() => this.questionService.refresh());
+  }
 }

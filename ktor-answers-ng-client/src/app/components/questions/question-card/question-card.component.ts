@@ -9,6 +9,7 @@ import {Question} from "../../../model/entity/question";
 export class QuestionCardComponent {
   @Input() question!: Question;
   @Output() selected = new EventEmitter<number>();
+  @Output() deleted = new EventEmitter<number>();
 
   bodySummary(): string {
     if(this.question.body.length < 200) {
@@ -18,7 +19,11 @@ export class QuestionCardComponent {
     }
   }
 
-    questionSelected() {
+    selectQuestion() {
         this.selected.emit(this.question.post_id)
+    }
+
+    deleteQuestion() {
+      this.deleted.emit(this.question.post_id)
     }
 }

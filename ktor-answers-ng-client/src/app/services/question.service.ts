@@ -40,6 +40,10 @@ export class QuestionService {
         );
   }
 
+  deleteById(id: number): Observable<Question> {
+    return this.http.delete<any>(`${url}/${id}`);
+  }
+
   refresh() {
     return this.getAll()
       .subscribe(questions => this.questionsSubject.next(questions));

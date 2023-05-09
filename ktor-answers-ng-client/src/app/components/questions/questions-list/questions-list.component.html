@@ -1,5 +1,5 @@
 <div>
-    <span class="fs-3">The Current List Of Questions</span>
+    <span class="fs-4">The Current List Of Questions</span>
     <button type="button"
             class="float-end btn btn-link"
             (click)="onNewQuestion()">
@@ -8,6 +8,9 @@
 </div>
 <hr>
 <div *ngFor="let question of questionService.questions | async">
-    <app-question-card [question]="question" (selected)="questionSelected($event)">
+    <app-question-card
+            [question]="question"
+            (selected)="questionSelected($event)"
+            (deleted)="questionDeleted($event)">
     </app-question-card>
 </div>

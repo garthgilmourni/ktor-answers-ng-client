@@ -1,6 +1,6 @@
 <div class="card mt-2 col-md-12">
     <div class="card-body">
-        <h5 class="card-title">{{question.title}}</h5>
+        <h5 class="card-title">{{question.post_id}}: {{question.title}}</h5>
         <div class="card-text">
             <div class="container">
                 <div class="row">
@@ -13,7 +13,8 @@
                     </div>
                 </div>
             </div>
-            <div class="btn btn-link" (click)="questionSelected()">Select</div>
+            <div class="btn btn-link" (click)="selectQuestion()">Select</div>
+            <div class="btn btn-link" (click)="deleteQuestion()">Delete</div>
         </div>
         <div class="card-footer text-body-secondary text-end">
             Asked by {{question.owner.user_id}} on {{question.creation_date | date:'shortDate'}}
