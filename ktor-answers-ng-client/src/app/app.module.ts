@@ -14,6 +14,7 @@ import { QuestionDetailComponent } from './components/questions/question-detail/
 import { UsersComponent } from './components/users/users.component';
 import { QuestionDetailTopComponent } from './components/questions/question-detail-top/question-detail-top.component';
 import { QuestionDetailAnswersComponent } from './components/questions/question-detail-answers/question-detail-answers.component';
+import { QuestionFormComponent } from './components/questions/question-form/question-form.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -34,7 +35,8 @@ export const routes: Routes = [
     QuestionDetailComponent,
     UsersComponent,
     QuestionDetailTopComponent,
-    QuestionDetailAnswersComponent
+    QuestionDetailAnswersComponent,
+    QuestionFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,21 @@
-<div *ngIf="!singleQuestionSelected">
-    <app-questions-list (selected)="questionSelected($event)"></app-questions-list>
-</div>
-<div *ngIf="singleQuestionSelected">
-    <app-question-detail [id]="selectedQuestionID" (finished)="questionDeSelected($event)">
-    </app-question-detail>
+<div [ngSwitch]="currentState">
+    <div *ngSwitchCase="'AddingQuestion'">
+        <app-question-form (closed)="questionFormClosed($event)">
+        </app-question-form>
+    </div>
+    <div *ngSwitchCase="'ShowingSingleQuestion'">
+        <app-question-detail
+                [id]="selectedQuestionID"
+                (finished)="questionDeSelected($event)">
+        </app-question-detail>
+    </div>
+    <div *ngSwitchCase="'ShowingAllQuestions'">
+        <app-questions-list
+                [onNewQuestion]="newQuestion.bind(this)"
+                (selected)="questionSelected($event)">
+        </app-questions-list>
+    </div>
+    <div *ngSwitchDefault>
+        <p>Impossible state for Questions Container</p>
+    </div>
 </div>

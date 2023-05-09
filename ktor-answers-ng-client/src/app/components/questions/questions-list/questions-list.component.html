@@ -1,3 +1,12 @@
+<div>
+    <span class="fs-3">The Current List Of Questions</span>
+    <button type="button"
+            class="float-end btn btn-link"
+            (click)="onNewQuestion()">
+        Ask A Question
+    </button>
+</div>
+<hr>
 <div *ngFor="let question of questionService.questions | async">
     <app-question-card [question]="question" (selected)="questionSelected($event)">
     </app-question-card>

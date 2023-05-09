@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {QuestionsContainerStates} from "./questions-container-states";
 
 @Component({
   selector: 'app-questions-container',
@@ -6,16 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./questions-container.component.css']
 })
 export class QuestionsContainerComponent {
+  currentState: QuestionsContainerStates = "ShowingAllQuestions"
   selectedQuestionID : number = -1;
-  singleQuestionSelected = false;
 
   questionSelected(id: number) {
-    this.singleQuestionSelected = true;
+    this.currentState = "ShowingSingleQuestion"
     this.selectedQuestionID = id;
   }
 
   questionDeSelected(id: number) {
-    this.singleQuestionSelected = false;
+    this.currentState = "ShowingAllQuestions"
     this.selectedQuestionID = -1;
+  }
+
+  newQuestion() {
+    this.currentState = "AddingQuestion"
+  }
+
+  questionFormClosed(successful: boolean) {
+    this.currentState = "ShowingAllQuestions"
   }
 }
