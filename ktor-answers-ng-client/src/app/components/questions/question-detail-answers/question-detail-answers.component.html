@@ -2,27 +2,29 @@
     <div *ngIf="question.answers.length == 0">
         <h3>No answers at present</h3>
     </div>
-    <h3>{{question.answers.length}} Answers</h3>
-    <div *ngFor="let answer of question.answers">
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div>{{answer.up_vote_count}} Up</div>
-                    <div>{{answer.down_vote_count}} Down</div>
+    <div *ngIf="question.answers.length > 0">
+        <h3>{{question.answers.length}} Answers</h3>
+        <div *ngFor="let answer of question.answers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div>{{answer.up_vote_count}} Up</div>
+                        <div>{{answer.down_vote_count}} Down</div>
+                    </div>
+                    <div class="col-9">
+                        {{answer.body}}
+                        <app-comments-display [comments]="answer.comments">
+                        </app-comments-display>
+                    </div>
                 </div>
-                <div class="col-9">
-                    {{answer.body}}
-                    <app-comments-display [comments]="answer.comments">
-                    </app-comments-display>
-                </div>
-            </div>
-            <div class="row">
+                <div class="row">
                 <span class="text-end">
                     Answered by {{answer.owner.user_id}} on {{answer.owner.creation_date | date:'shortDate'}}
                 </span>
-            </div>
-            <div class="row">
-                <hr/>
+                </div>
+                <div class="row">
+                    <hr/>
+                </div>
             </div>
         </div>
     </div>

@@ -24,7 +24,7 @@ export class QuestionsContainerComponent {
     this.currentState = "AddingQuestion"
   }
 
-  questionFormClosed(successful: boolean) {
+  questionFormComplete(successful: boolean) {
     this.currentState = "ShowingAllQuestions"
   }
 }

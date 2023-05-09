@@ -40,8 +40,12 @@ export class QuestionService {
         );
   }
 
-  deleteById(id: number): Observable<Question> {
+  deleteById(id: number): Observable<any> {
     return this.http.delete<any>(`${url}/${id}`);
+  }
+
+  createQuestion(question: Question): Observable<any> {
+    return this.http.post(`${url}`, question);
   }
 
   refresh() {

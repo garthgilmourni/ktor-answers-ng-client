@@ -1,6 +1,6 @@
 <div [ngSwitch]="currentState">
     <div *ngSwitchCase="'AddingQuestion'">
-        <app-question-form (closed)="questionFormClosed($event)">
+        <app-question-form (submitted)="questionFormComplete($event)">
         </app-question-form>
     </div>
     <div *ngSwitchCase="'ShowingSingleQuestion'">

@@ -16,6 +16,7 @@ import { QuestionDetailTopComponent } from './components/questions/question-deta
 import { QuestionDetailAnswersComponent } from './components/questions/question-detail-answers/question-detail-answers.component';
 import { QuestionFormComponent } from './components/questions/question-form/question-form.component';
 import { CommentsDisplayComponent } from './components/comments/comments-display/comments-display.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -40,11 +41,12 @@ export const routes: Routes = [
     QuestionFormComponent,
     CommentsDisplayComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        RouterModule.forRoot(routes),
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

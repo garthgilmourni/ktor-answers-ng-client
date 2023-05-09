@@ -1,6 +1,72 @@
-<p>question-form works!</p>
-<button type="button"
-        class="btn btn-primary"
-        (click)="formClosed(true)">
-    Close
-</button>
+<h4 class="text-center">Enter the Question Details Below</h4>
+<form [formGroup]="questionForm"
+      (ngSubmit)="createNewQuestion()"
+      class="container">
+    <div class="row">
+        <fieldset class="col-md-8 mb-3">
+            <label class="form-label">
+                Question ID:
+            </label>
+            <input size="30"
+                   type="text"
+                   class="form-control {{checkValid(questionForm.controls.id)}}"
+                   data-testid="questionID"
+                   formControlName="id">
+            <ng-container *ngIf="questionForm.controls.title.errors">
+                <div class="invalid-feedback" *ngIf="questionForm.controls.id.hasError('required')">
+                    An ID is required for the test server
+                </div>
+            </ng-container>
+        </fieldset>
+    </div>
+    <div class="row">
+        <fieldset class="col-md-8 mb-3">
+            <label class="form-label">
+                Question Title:
+            </label>
+            <input size="30"
+                   type="text"
+                   class="form-control {{checkValid(questionForm.controls.title)}}"
+                   data-testid="questionTitle"
+                   formControlName="title">
+            <ng-container *ngIf="questionForm.controls.title.errors">
+                <div class="invalid-feedback" *ngIf="questionForm.controls.title.hasError('required')">
+                    The title of the question is required
+                </div>
+                <div class="invalid-feedback" *ngIf="questionForm.controls.title.hasError('pattern')">
+                    The title contains illegal characters
+                </div>
+            </ng-container>
+        </fieldset>
+    </div>
+    <div class="row">
+        <fieldset class="col-md-8 mb-3">
+            <label class="form-label">
+                Question Body:
+            </label>
+            <textarea class="form-control {{checkValid(questionForm.controls.body)}}"
+                      data-testid="questionBody"
+                      formControlName="body">
+        </textarea>
+            <ng-container *ngIf="questionForm.controls.body.errors">
+                <div class="invalid-feedback" *ngIf="questionForm.controls.body.hasError('required')">
+                    The body of the question is required
+                </div>
+                <div class="invalid-feedback" *ngIf="questionForm.controls.body.hasError('pattern')">
+                    The body contains illegal characters
+                </div>
+            </ng-container>
+        </fieldset>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <fieldset>
+                <input class="btn btn-success"
+                       data-testid="submitButton"
+                       type="submit"
+                       [disabled]="!questionForm.valid"
+                       value="Submit Question"/>
+            </fieldset>
+        </div>
+    </div>
+</form>
