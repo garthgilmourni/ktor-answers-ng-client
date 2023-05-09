@@ -11,16 +11,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { QuestionCardComponent } from './components/questions/question-card/question-card.component';
 import { QuestionsContainerComponent } from './components/questions/questions-container/questions-container.component';
 import { QuestionDetailComponent } from './components/questions/question-detail/question-detail.component';
-import { UsersComponent } from './components/users/users.component';
+import { UsersTableComponent } from './components/users/users-table/users-table.component';
 import { QuestionDetailTopComponent } from './components/questions/question-detail-top/question-detail-top.component';
 import { QuestionDetailAnswersComponent } from './components/questions/question-detail-answers/question-detail-answers.component';
 import { QuestionFormComponent } from './components/questions/question-form/question-form.component';
 import { CommentsDisplayComponent } from './components/comments/comments-display/comments-display.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { UserRowComponent } from './components/users/user-row/user-row.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'users', component: UsersComponent},
+  {path: 'users', component: UsersTableComponent},
   {path: 'questions', component: QuestionsContainerComponent},
   {path: 'answers', component: AnswersComponent}
 ];
@@ -35,11 +36,12 @@ export const routes: Routes = [
     QuestionCardComponent,
     QuestionsContainerComponent,
     QuestionDetailComponent,
-    UsersComponent,
+    UsersTableComponent,
     QuestionDetailTopComponent,
     QuestionDetailAnswersComponent,
     QuestionFormComponent,
-    CommentsDisplayComponent
+    CommentsDisplayComponent,
+    UserRowComponent
   ],
     imports: [
         BrowserModule,
