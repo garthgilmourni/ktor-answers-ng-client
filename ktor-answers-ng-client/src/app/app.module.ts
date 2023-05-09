@@ -11,9 +11,11 @@ import {HttpClientModule} from "@angular/common/http";
 import { QuestionCardComponent } from './components/questions/question-card/question-card.component';
 import { QuestionsContainerComponent } from './components/questions/questions-container/questions-container.component';
 import { QuestionDetailComponent } from './components/questions/question-detail/question-detail.component';
+import { UsersComponent } from './components/users/users.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'users', component: UsersComponent},
   {path: 'questions', component: QuestionsContainerComponent},
   {path: 'answers', component: AnswersComponent}
 ];
@@ -27,7 +29,8 @@ export const routes: Routes = [
     AnswersComponent,
     QuestionCardComponent,
     QuestionsContainerComponent,
-    QuestionDetailComponent
+    QuestionDetailComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
