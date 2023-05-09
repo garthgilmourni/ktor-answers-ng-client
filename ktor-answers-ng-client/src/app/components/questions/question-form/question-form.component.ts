@@ -26,6 +26,7 @@ export class QuestionFormComponent {
         let now = new Date();
         let user: User = {
             user_id: 101,
+            display_name: "Jane Smith",
             user_type: "registered",
             creation_date: now,
             link: ""
