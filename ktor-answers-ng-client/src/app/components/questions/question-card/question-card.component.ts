@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Question} from "../../model/entity/question";
+import {Question} from "../../../model/entity/question";
 
 @Component({
   selector: 'app-question-card',
