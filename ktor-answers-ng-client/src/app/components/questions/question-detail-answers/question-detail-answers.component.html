@@ -12,6 +12,8 @@
                 </div>
                 <div class="col-9">
                     {{answer.body}}
+                    <app-comments-display [comments]="answer.comments">
+                    </app-comments-display>
                 </div>
             </div>
             <div class="row">
