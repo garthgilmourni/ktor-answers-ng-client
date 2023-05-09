@@ -1,5 +1,7 @@
-
 <div class="container">
-  <app-navigation-bar [title]="title"></app-navigation-bar>
-  <router-outlet></router-outlet>
+    <app-navigation-bar
+            [title]="title"
+            [subtitle]="subtitle">
+    </app-navigation-bar>
+    <router-outlet></router-outlet>
 </div>

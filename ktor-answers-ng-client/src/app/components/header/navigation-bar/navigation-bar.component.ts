@@ -7,4 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class NavigationBarComponent {
   @Input() title: String | null = null;
+  @Input() subtitle: String | null = null;
 }
