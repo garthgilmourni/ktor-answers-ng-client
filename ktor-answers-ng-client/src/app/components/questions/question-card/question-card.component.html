@@ -16,7 +16,7 @@
             <div class="btn btn-link" (click)="questionSelected()">Select</div>
         </div>
         <div class="card-footer text-body-secondary text-end">
-            Asked by {{question.owner.user_id}} on {{question.creation_date}}
+            Asked by {{question.owner.user_id}} on {{question.creation_date | date:'shortDate'}}
         </div>
     </div>
 </div>
