@@ -1,0 +1,19 @@
+<div>
+    <h4>The Current Users</h4>
+</div>
+<hr>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Display Name</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>About Me</th>
+        <th>Creation Date</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userService.users | async"
+            app-user-row [user]="user">
+        </tr>
+    </tbody>
+</table>
