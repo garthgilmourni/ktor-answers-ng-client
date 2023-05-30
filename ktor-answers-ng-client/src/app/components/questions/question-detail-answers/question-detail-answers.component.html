@@ -8,8 +8,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-3">
-                        <div>{{answer.up_vote_count}} Up</div>
-                        <div>{{answer.down_vote_count}} Down</div>
+                        <div>{{answer.upVoteCount}} Up</div>
+                        <div>{{answer.downVoteCount}} Down</div>
                     </div>
                     <div class="col-9">
                         {{answer.body}}
@@ -19,7 +19,7 @@
                 </div>
                 <div class="row">
                 <span class="text-end">
-                    Answered by {{answer.owner.user_id}} on {{answer.owner.creation_date | date:'shortDate'}}
+                    Answered by {{answer.owner.userId}} on {{answer.owner.creationDate | date:'shortDate'}}
                 </span>
                 </div>
                 <div class="row">

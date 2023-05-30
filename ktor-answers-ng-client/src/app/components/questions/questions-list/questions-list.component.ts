@@ -26,6 +26,9 @@ export class QuestionsListComponent implements OnInit {
   questionDeleted(id: number) {
     this.questionService
         .deleteById(id)
-        .subscribe(() => this.questionService.refresh());
+        .subscribe(() => {
+          console.log(`Question ${id} deleted`);
+          this.questionService.refresh()
+        });
   }
 }

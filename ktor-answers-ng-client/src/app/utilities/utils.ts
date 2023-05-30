@@ -17,60 +17,60 @@ export function createTextValidator() {
 
 export function remapQuestion(json: JsonQuestion): Question {
     return new Question(
-        json.post_id,
-        json.post_type,
-        new Date(json.creation_date),
-        new Date(json.last_activity_date),
-        new Date(json.last_edit_date),
+        json.postId,
+        json.postType,
+        new Date(json.creationDate),
+        new Date(json.lastActivityDate),
+        new Date(json.lastEditDate),
         json.link,
         json.title,
         json.body,
         remapComments(json.comments),
-        json.up_vote_count,
-        json.down_vote_count,
+        json.upVoteCount,
+        json.downVoteCount,
         remapUser(json.owner),
-        json.is_answered,
-        json.accepted_answer_id,
+        json.isAnswered,
+        json.acceptedAnswerId,
         remapAnswers(json.answers)
     )
 }
 
 export function remapUser(json: JsonUser): User {
     return new User(
-        json.user_id,
-        json.user_type,
-        json.display_name,
-        new Date(json.creation_date),
+        json.userId,
+        json.userType,
+        json.displayName,
+        new Date(json.creationDate),
         json.link,
         json.location,
-        json.about_me
+        json.aboutMe
     )
 }
 
 export function remapComments(jsonArray: JsonComment[]): PostComment[] {
     return jsonArray.map(json => new PostComment(
-        json.comment_id,
+        json.commentId,
         remapUser(json.owner),
-        json.post_id,
+        json.postId,
         json.body
     ));
 }
 
 export function remapAnswers(jsonArray: JsonAnswer[]): Answer[] {
     return jsonArray.map(json => new Answer(
-        json.post_id,
-        json.post_type,
-        new Date(json.creation_date),
-        new Date(json.last_activity_date),
-        new Date(json.last_edit_date),
+        json.postId,
+        json.postType,
+        new Date(json.creationDate),
+        new Date(json.lastActivityDate),
+        new Date(json.lastEditDate),
         json.link,
         json.title,
         json.body,
         remapComments(json.comments),
-        json.up_vote_count,
-        json.down_vote_count,
+        json.upVoteCount,
+        json.downVoteCount,
         remapUser(json.owner),
         json.accepted,
-        json.question_id
+        json.questionId
     ));
 }

@@ -5,7 +5,7 @@ import {User} from "../../model/entity/user";
 import {JsonUser} from "../../model/api/json-user";
 import {remapUser} from "../../utilities/utils";
 
-const url = "http://localhost:8080/users";
+const url = "http://localhost:8080/users2";
 
 @Injectable({
   providedIn: 'root'

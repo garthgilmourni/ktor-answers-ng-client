@@ -25,10 +25,10 @@ export class QuestionFormComponent {
     createNewQuestion() {
         let now = new Date();
         let user: User = {
-            user_id: 101,
-            display_name: "Jane Smith",
-            user_type: "registered",
-            creation_date: now,
+            userId: 101,
+            displayName: "Jane Smith",
+            userType: "REGISTERED",
+            creationDate: now,
             link: ""
         };
         let id = this.questionForm.controls.id.value ?? 0;
@@ -36,20 +36,20 @@ export class QuestionFormComponent {
         let body = this.questionForm.controls.body.value ?? "";
 
         let question: Question = {
-            post_id: id,
-            post_type: "question",
-            creation_date: new Date(),
-            last_activity_date: new Date(),
-            last_edit_date: new Date(),
+            postId: 1112,
+            postType: "QUESTION",
+            creationDate: new Date(),
+            lastActivityDate: new Date(),
+            lastEditDate: new Date(),
             link: "",
             title: title,
             body: body,
             comments: [],
-            up_vote_count: 0,
-            down_vote_count: 0,
+            upVoteCount: 0,
+            downVoteCount: 0,
             owner: user,
-            is_answered: false,
-            accepted_answer_id: -1,
+            isAnswered: false,
+            acceptedAnswerId: -1,
             answers: []
         }
 

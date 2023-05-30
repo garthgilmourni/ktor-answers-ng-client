@@ -1,11 +1,11 @@
 import {UserType} from "../user-type";
 
 export interface JsonUser {
-  user_id: number,
-  user_type: UserType,
-  creation_date: string,
-  display_name: string,
+  userId: number,
+  userType: UserType,
+  creationDate: string,
+  displayName: string,
   link: string,
   location?: string,
-  about_me?: string
+  aboutMe?: string
 }

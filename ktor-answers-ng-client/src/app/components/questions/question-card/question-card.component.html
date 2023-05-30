@@ -1,6 +1,6 @@
 <div class="card mt-2 col-md-12">
     <div class="card-body">
-        <h5 class="card-title">{{question.post_id}}: {{question.title}}</h5>
+        <h5 class="card-title">{{question.postId}}: {{question.title}}</h5>
         <div class="card-text">
             <div class="container">
                 <div class="row">
@@ -17,7 +17,7 @@
             <div class="btn btn-link" (click)="deleteQuestion()">Delete</div>
         </div>
         <div class="card-footer text-body-secondary text-end">
-            Asked by {{question.owner.display_name}} on {{question.creation_date | date:'shortDate'}}
+            Asked by {{question.owner.displayName}} on {{question.creationDate | date:'shortDate'}}
         </div>
     </div>
 </div>

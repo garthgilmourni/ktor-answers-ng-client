@@ -1,6 +1,6 @@
 export type UserType =
-  "unregistered" |
-  "registered" |
-  "moderator" |
-  "team_admin" |
-  "does_not_exist"
+  "UNREGISTERED" |
+  "REGISTERED" |
+  "MODERATOR" |
+  "TEAM_ADMIN" |
+  "DOES_NOT_EXIST"

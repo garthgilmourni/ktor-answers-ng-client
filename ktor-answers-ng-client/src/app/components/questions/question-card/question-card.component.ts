@@ -20,10 +20,10 @@ export class QuestionCardComponent {
   }
 
     selectQuestion() {
-        this.selected.emit(this.question.post_id)
+        this.selected.emit(this.question.postId)
     }
 
     deleteQuestion() {
-      this.deleted.emit(this.question.post_id)
+      this.deleted.emit(this.question.postId)
     }
 }

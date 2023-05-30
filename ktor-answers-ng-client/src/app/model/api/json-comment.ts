@@ -1,8 +1,8 @@
 import {JsonUser} from "./json-user";
 
 export interface JsonComment {
-  comment_id: number,
+  commentId: number,
   owner: JsonUser,
-  post_id: number,
+  postId: number,
   body: string
 }

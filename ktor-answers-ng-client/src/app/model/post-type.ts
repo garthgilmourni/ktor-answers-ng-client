@@ -1,1 +1,1 @@
-export type PostType = "question" | "answer"
+export type PostType = "QUESTION" | "ANSWER"
