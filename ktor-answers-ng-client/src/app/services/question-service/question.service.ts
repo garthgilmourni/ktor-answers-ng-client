@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {JsonQuestion} from "../../model/api/json-question";
 import {BehaviorSubject, map, Observable} from "rxjs";
 import {Question} from "../../model/entity/question";
-import {remapQuestion} from "../../utilities/utils";
+import {remapQuestion, unmapQuestion} from "../../utilities/utils";
 
 const url = "http://localhost:8080/questions2";
 
@@ -39,7 +39,7 @@ export class QuestionService {
   }
 
   createQuestion(question: Question): Observable<any> {
-    return this.http.post(`${url}`, question);
+    return this.http.post(`${url}`, unmapQuestion(question));
   }
 
   refresh() {
