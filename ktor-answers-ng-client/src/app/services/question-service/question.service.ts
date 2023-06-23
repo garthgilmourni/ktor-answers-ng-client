@@ -5,7 +5,7 @@ import {BehaviorSubject, map, Observable} from "rxjs";
 import {Question} from "../../model/entity/question";
 import {remapQuestion, unmapQuestion} from "../../utilities/utils";
 
-const url = "http://localhost:8080/questions2";
+const url = "http://localhost:8080/questions";
 
 @Injectable({
   providedIn: 'root'
